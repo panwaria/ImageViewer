@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+	<!-- The original image will show up here. -->
+	<ImageView
+		android:id="@+id/image_large"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_alignParentTop="true"
+		android:layout_above="@+id/image_caption_framelayout"/>
+	
+	<!-- To display TextView and EditText at same place -->
+	<FrameLayout
+	    android:id="@id/image_caption_framelayout"
+	    android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true" 
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp">
+	
+		<!-- To layout EditText and the Button horizontally -->	    
+	    <LinearLayout
+	        android:id="@+id/image_caption_linearlayout"
+		    android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+			
+			<EditText
+			    android:id="@+id/image_caption_edittext"
+			    android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:hint="Add a caption..." 
+				android:textSize="16sp"
+				android:layout_weight="1" />
+			
+			<Button
+			    android:id="@+id/image_caption_button"
+			    android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:text="Add"
+				android:textSize="16sp"
+				android:layout_weight="5"
+				android:onClick="onButtonClick" />
+		
+		</LinearLayout>
+		
+		<TextView
+		    android:id="@+id/image_caption_textview"
+		    android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:textSize="16sp"
+			android:onClick="onTextViewClick"
+			android:clickable="true" />	
+	    
+	</FrameLayout>
+	    
+</RelativeLayout>

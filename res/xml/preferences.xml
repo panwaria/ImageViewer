@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+ 	<PreferenceCategory
+   		android:title="ImageViewer Preferences" >
+  	
+  		<CheckBoxPreference
+     		android:key="allow_open_gallery"
+     		android:title="Access Gallery App"
+     		android:summary="Allow opening Gallery App from this app."
+     		android:defaultValue="true" />
+  		
+ 	</PreferenceCategory>
+
+</PreferenceScreen>
